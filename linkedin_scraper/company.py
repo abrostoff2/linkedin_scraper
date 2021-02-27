@@ -188,7 +188,7 @@ class Company(Scraper):
         if 'Cookie Policy' in driver.find_elements_by_tag_name("section")[1].text or 'ad-banner-container' in driver.find_elements_by_tag_name("section")[1].get_attribute('class'):
             section_id = 4
         else:
-            section_id = 3
+            section_id = 4
         grid = driver.find_elements_by_tag_name("section")[section_id]
         descWrapper = grid.find_elements_by_tag_name("p")
         if len(descWrapper) > 0:
